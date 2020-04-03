@@ -5,6 +5,7 @@ ARG TZ=Asia/Shanghai
 ARG CONTAINER_PACKAGE_URL=mirrors.aliyun.com
 ARG NGINX_INSTALL_APPS=
 
+ENV TZ=${TZ}
 ENV INSTALL_APPS=",${NGINX_INSTALL_APPS},"
 
 RUN if [ "${CONTAINER_PACKAGE_URL}" != "" ]; then \
